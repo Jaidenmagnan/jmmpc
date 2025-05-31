@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/fhs/gompd/v2/mpd"
@@ -93,13 +92,13 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	songs, err := conn.ListAllInfo("/")
+	songs, err := conn.ListAllInfo("")
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	for _, song := range songs {
-		fmt.Println(song)
+		log.Fatalln(song)
 	}
 
 	//p := tea.NewProgram(initialModel(songs))
